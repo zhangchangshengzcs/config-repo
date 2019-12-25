@@ -14,7 +14,7 @@ spring:
     username: guest
     password: guest
   redis:
-    host: 127.0.0.1
+    host: 39.107.70.133
     port: 6379
 env:
   test
