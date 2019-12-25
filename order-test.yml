@@ -14,6 +14,7 @@ spring:
     username: guest
     password: guest
   redis:
+    database: 0
     host: 39.107.70.133
     port: 6379
     password: ''
