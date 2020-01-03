@@ -1,0 +1,22 @@
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+  sensitive-headers:
+  routes:
+    myProduct:
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+  ignored-patterns:
+    - /**/product/listForOrder
+management:
+  security:
+    enabled: false
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+spring:
+  redis:
+    host: 39.107.70.133
+    port: 6379
