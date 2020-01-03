@@ -2,21 +2,13 @@ zuul:
   host:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
-# 全部服务忽略敏感头（全部服务都可以传递cookie）
   sensitive-headers:
   routes:
-#   /myProduct/product/list -> /product/product/list
     myProduct:
       path: /myProduct/**
       serviceId: product
-#      不过滤掉敏感消息头：比如cookie
       sensitiveHeaders:
-#    简洁写法
-#    product: /myProduct/**
-#    排除某些路由
   ignored-patterns:
-#    - /product/product/listForOrder
-#    - /myProduct/product/listForOrder
     - /**/product/listForOrder
 management:
   security:
