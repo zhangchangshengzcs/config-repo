@@ -6,9 +6,5 @@ spring:
     username: root
     password: rootzcs
     url: jdbc:mysql://127.0.0.1:3306/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8762/eureka/
 env:
   zcs1
