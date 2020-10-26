@@ -8,3 +8,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
 env:
   test
+girl:
+  name: lili
+  age: 18
