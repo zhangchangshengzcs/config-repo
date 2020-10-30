@@ -1,3 +1,7 @@
+spring:
+  redis:
+    host: 39.107.70.133
+    port: 6379
 zuul:
   sensitive-headers: 
   routes:
