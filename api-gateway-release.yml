@@ -1,0 +1,23 @@
+spring:
+  redis:
+    host: 39.107.70.133
+    port: 6379
+zuul:
+  sensitive-headers: 
+  routes:
+  # /myProduct/product/list -> /product/product/list
+    myProduct:
+      path: /myProduct/**
+      serviceId: product
+      sensitiveHeaders:
+  #简洁写法
+#    product: /myProduct/**
+    #排除某些路由
+  ignored-patterns:
+    - /**/product/listForOrder
+management:
+  security:
+    enabled: false
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000
